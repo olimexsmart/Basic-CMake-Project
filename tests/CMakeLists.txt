@@ -1,27 +1,25 @@
-set(Boost_USE_STATIC_LIBS OFF)
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
-
 # Sources that contain the tests
-add_executable(BoostTest
-        testFuncs.cpp # Just this one contains BOOST_TEST_MAIN
+add_executable(catch2Test
+        catch2Main.cpp # Just this one contains BOOST_TEST_MAIN
+        testFuncs.cpp
         testDynamicLib.cpp
         testStaticLib.cpp
         testA.cpp)
 
 # Libraries used in the tests
-target_link_libraries(BoostTest
-        ${Boost_LIBRARIES}
+target_link_libraries(catch2Test
         libStatic
         libDynamic)
 
 # Including headers
-target_include_directories(BoostTest PRIVATE
-        ${Boost_INCLUDE_DIRS}
+target_include_directories(catch2Test PRIVATE
         ../include) # Including this allows to simply write #include "funcs.h"
 
 # Including sources
-target_sources(BoostTest PRIVATE
+target_sources(catch2Test PRIVATE
         ../src/A.cpp)
+
+target_compile_options(catch2Test PRIVATE -Wa,-mbig-obj) # Solves assembler error of file too big
 
 # Basic reference on how to write Boost Tests:
 # https://www.boost.org/doc/libs/1_45_0/libs/test/doc/html/tutorials/hello-the-testing-world.html
