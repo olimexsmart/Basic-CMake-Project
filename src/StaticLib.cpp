@@ -2,7 +2,7 @@
 // Created by olli on 31/01/20.
 //
 
-#include "StaticLib.h"
+#include "libstatic/StaticLib.h"
 
 
 int StaticLib::testMe(int n) {

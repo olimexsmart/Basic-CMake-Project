@@ -2,8 +2,8 @@
 
 #include "funcs.h"
 #include "A.h"
-#include "StaticLib.h"
-#include "DynamicLib.h"
+#include "libstatic/StaticLib.h"
+#include "libdynamic/DynamicLib.h"
 
 using namespace std;
 

@@ -2,7 +2,7 @@
 // Created by olli on 31/01/20.
 //
 
-#include "DynamicLib.h"
+#include "libdynamic/DynamicLib.h"
 
 #include <utility>
 

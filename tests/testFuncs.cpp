@@ -1,7 +1,7 @@
 /*
  * Test for the collection of functions in funcs.h
  */
-#include "catch2.hpp"
+#include "catch2/catch2.hpp"
 #include "funcs.h"
 
 
