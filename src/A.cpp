@@ -13,5 +13,5 @@ A::A() {
 }
 
 int A::yes(int u) {
-    return u * 5;
+    cout << "A yes: " << u << endl;
 }

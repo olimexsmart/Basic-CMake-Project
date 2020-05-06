@@ -4,6 +4,7 @@
 #include "A.h"
 #include "libstatic/StaticLib.h"
 #include "libdynamic/DynamicLib.h"
+#include "libtemplate/Template.h"
 
 using namespace std;
 
@@ -18,6 +19,9 @@ int main() {
 
     DynamicLib dl("Dynamic: ");
     cout << dl.yesItsMe(50) << endl;
+
+    TemplateLib<int> tl(44);
+    cout << "Template: " << tl.getStuff() << endl;
 
     return 0;
 }
